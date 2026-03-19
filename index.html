@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
      <link rel="stylessheet" href="style.css">
+    
+     <script>
+    window.onload = function(){    
+        let algne = document.getElementById("clicks");
+        algne.innerHTML = localStorage.getItem("test");
+    }
+
+        function kaunter(){
+        
+        let algne = document.getElementById("clicks");
+        let tulemus = Number(algne.innerHTML)+ 1;
+         algne.innerHTML = tulemus;
+
+         localStorage.setItem("test", tulemus)
+        }
+     </script>
 </head>
 <body>
     <div>
@@ -19,7 +35,9 @@
 
     <a href="https://perg.ee">parim kool.</a>
 
-    <img src="graphic-1714230_1280-1024x682-web.webp" alt="Pildil on graafik">
+<h2>Klikke kokku <span id="clicks">0</span></h2>
+
+    <img src="pilt.webp" alt="Pildil on graafik" onclick="kaunter()">
 
 </body>
 </html>
